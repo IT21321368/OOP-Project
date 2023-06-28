@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns = "http://xmlns.jcp.org/xml/ns/javaee"
+     xsi:schemaLocation= "http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+     id="webApp_ID"  version="3.1">
+     <display-name>User Management Web Application</display-name>
+     
+     <error-page>
+       <exception-type>java.lang.Exception</exception-type>
+       <location>/Error.jsp</location>
+     </error-page>
+     
+     <!-- loging -->
+     <servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.customer.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+     
+    <!-- dashbord -->
+    <servlet>
+		<servlet-name>dashbordServlet</servlet-name>
+		<servlet-class>dashbord.dashbordServlet</servlet-class>
+	</servlet>     
+	<servlet-mapping>
+		<servlet-name>dashbordServlet</servlet-name>
+		<url-pattern>/dashbord</url-pattern>
+	</servlet-mapping>
+
+	<!-- admin -->
+	<servlet>
+		<servlet-name>adminServlet</servlet-name>
+		<servlet-class>admin.adminServlet</servlet-class>
+	</servlet>     
+	<servlet-mapping>
+		<servlet-name>adminServlet</servlet-name>
+		<url-pattern>/adminlist</url-pattern>
+	</servlet-mapping>
+	
+	<!-- teacher -->
+	<servlet>
+		<servlet-name>teacherServlet</servlet-name>
+		<servlet-class>teacher.teacherServlet</servlet-class>
+	</servlet>     
+	<servlet-mapping>
+		<servlet-name>teacherServlet</servlet-name>
+		<url-pattern>/teacherlist</url-pattern>
+	</servlet-mapping>
+	
+	<!-- student -->
+	<servlet>
+		<servlet-name>studentServlet</servlet-name>
+		<servlet-class>student.studentServlet</servlet-class>
+	</servlet>     
+	<servlet-mapping>
+		<servlet-name>studentServlet</servlet-name>
+		<url-pattern>/studentlist</url-pattern>
+	</servlet-mapping>
+	
+	<!-- result -->
+	<servlet>
+		<servlet-name>resultServlet</servlet-name>
+		<servlet-class>result.resultServlet</servlet-class>
+	</servlet>     
+	<servlet-mapping>
+		<servlet-name>resultServlet</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+         
+</web-app>
+
